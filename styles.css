@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans';
+    background-color: #f2f2f2;
+}
+
+ul {
+    float: right;
+}
+li, a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+h3 {
+    font-weight: 600;
+    font-size: 1.875rem;
+}
+h6 {
+    font-size: 1.125rem;
+    line-height: 1.2;
+}
+
+#logo {
+    position: absolute;
+    cursor: pointer;
+    left: 20vw;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #fff;
+}
+
+ #pages li {
+    display: inline-block;
+    padding: 0px 20px;
+} 
+
+#pages li a {
+    transition: all 0.3s ease 0s;
+}
+#pages li a:hover {
+    color: #f35a36;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    color: #111111;
+    align-items: center;
+    text-align: center;
+}
+
+#menu {
+    font-size: 3.75rem;
+    margin: 57px auto 0;
+    color:#f12c0e;
+}
+#desc {
+    width: 793px;
+    font-style: italic;
+    margin: 20px auto 0;
+}
+
+#pizzas {
+    min-height: 510px;
+    display: grid;
+    grid-template-columns: repeat(2, calc(((100% - 940px) / 2) + 455px));
+    width: 1120px;
+    margin: 40px 0 0;
+    grid-gap: 30px;
+}
+
+.pizza-box {
+    display: flex;
+    width: 300vw;
+    justify-content: flex-start;
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    padding: 30px 0 30px 30px;
+    background-color: #fff;
+}
+
+.pizza-img {
+    width: 255px;
+    height: 249px;
+    margin: 0 auto 0 0;
+    border-width: 0;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.content {
+    padding: 0 25px;
+    text-align: left;
+}
+.ingredients {
+    margin: 20px 0 0 auto;
+}
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 20px 0 40px 0;
+    color:#f12c0e;
+}
+.add_to_cart {
+    border-style: none;
+    font-size: 0.875rem;
+    margin-top: 20px 0 0 !important;
+    background-color: #e5e5e5;
+    padding: 10px 30px;
+}
+#img-source {
+    display: flex;
+    align-items: center;
+    margin: 37px auto 57px;
+}
+#freepik {
+    font-weight: 800;
+    color: #f35a36;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 3vw 5vw;
+}
+#footer-text {
+    display: block;
+    width: 417px;
+    font-weight: 0.875rem;
+   
+}
+
+/*===========================MEDIA QUERIES FOR DIF SCREENS=================================*/
+@media only screen and (max-width: 1024px) {
+    html {
+        width: fit-content;
+    }
+    header {
+        padding: 25px 10%;
+    }
+    #logo {
+        position: absolute;
+        cursor: pointer;
+        left: 5vw;
+    }
+    #pizzas {
+        width: 968px;
+        margin: 40px 28px;
+    }
+    .add_to_cart {
+        margin-top: 20px 0 0 !important;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        max-width: 768px;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    h6 {
+        font-size: 0.925rem;
+        line-height: 1.2;
+    }
+    
+    #logo {
+        position: absolute;
+        cursor: pointer;
+        left: 10vw;
+        top: 3%;
+    }
+    
+    header {
+        padding: 40px 10%;
+    }
+
+     #pages li {
+        display: none;
+    } 
+    
+    #menu {
+        font-size: 4rem;
+        margin-top: 20px;
+        align-items: center;
+        color:#f12c0e;
+    }
+    #desc {
+        font-size: 1.2rem;
+        width: 600px;
+        font-style: italic;
+        margin: 20px auto 0;
+    }
+    
+    #pizzas {
+        display: flex;
+        flex-direction: column;
+        width: 650px;
+        margin: 40px 0 0;
+    }
+    
+    .pizza-box {
+        padding: 30px 0 30px 30px;
+    }
+    
+    .content {
+        padding: 20px;
+        margin-right: 40px;
+    }
+    .ingredients {
+        font-size: 1.5rem;
+    }
+    .price {
+        font-size: 1.7rem;
+    }
+    .add_to_cart {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 2000px) and (max-width: 4000px) { 
+    ul {
+       float:right;
+    } 
+    #logo {
+        position: absolute;
+        cursor: pointer;
+        left: 30%;
+    }
+    header {
+        padding-right: 30vw;
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 4000px) and (max-width: 9000px) { 
+    ul {
+       float:right;
+    } 
+    #logo {
+        position: absolute;
+        cursor: pointer;
+        left: 40%;
+    }
+    header {
+        padding-right: 40%;
+        background-color: #fff;
+    }
+}
